@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", px-sans, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-neon-pink: #ff007f;
+  --color-neon-pink-hover: #ff3399;
+  --color-neon-glow: rgba(255, 0, 127, 0.45);
+  
+  --color-dark-bg: #050508;
+  --color-card-bg: rgba(10, 10, 16, 0.6);
+  --color-card-border: rgba(255, 255, 255, 0.08);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-dark-bg);
+    color: #f3f4f6;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #050508;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #11111a;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 0, 127, 0.2);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 0, 127, 0.4);
+  }
+}
+
+/* Custom visual utilities for neon glows and cinematic gradients */
+.neon-glow-text {
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.4),
+               0 0 20px rgba(255, 0, 127, 0.2);
+}
+
+.neon-glow-card {
+  box-shadow: 0 0 25px -5px rgba(255, 0, 127, 0.15),
+              0 0 15px -3px rgba(255, 0, 127, 0.05);
+}
+
+.neon-glow-card-hover:hover {
+  box-shadow: 0 0 30px -2px rgba(255, 0, 127, 0.35),
+               0 0 15px -5px rgba(255, 0, 127, 0.15);
+  border-color: rgba(255, 0, 127, 0.45) !important;
+}
+
+.glass-morphism {
+  background: rgba(8, 8, 12, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-navbar {
+  background: rgba(3, 3, 5, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Cinematic grain overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
