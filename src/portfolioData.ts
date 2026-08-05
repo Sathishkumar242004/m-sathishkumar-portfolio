@@ -4,6 +4,7 @@ import portfolioImage from '../assets/portfolio.jpg.png';
 import landingImage from '../assets/landing.jpg.png';
 import logosImage from '../assets/logos.jpg.png';
 import aiShowcaseImage from '../assets/ai-showcase.jpg.png';
+import atmosphereWeatherImage from '../assets/atmosphere-weather.png';
 
 export const portfolioOwner = {
   name: 'M SATHISHKUMAR',
@@ -159,7 +160,24 @@ export const projectsData: Project[] = [
     tags: ['AI Image Generation', 'Marketing Visuals', 'Cinematic Artwork', 'Creative Concepts'],
     liveUrl: '#',
     githubUrl: '#'
-  }
+  },
+  {
+  id: 'proj-0',
+  title: 'Atmosphere Weather',
+  description: 'A premium glassmorphism weather application built with React, TypeScript and Vite. Features live weather updates, dynamic backgrounds, animated weather icons, search suggestions, responsive design, and Apple VisionOS-inspired UI.',
+  category: 'Frontend Application',
+  image: atmosphereWeatherImage,
+  tags: [
+    'React',
+    'TypeScript',
+    'Vite',
+    'Weather API',
+    'Glassmorphism',
+    'Responsive UI'
+  ],
+  liveUrl: 'https://atmosphere-weather-teal.vercel.app/',
+  githubUrl: 'https://github.com/Sathishkumar242004/atmosphere-weather'
+},
 ];
 
 export const whyWorkWithMeData = [
